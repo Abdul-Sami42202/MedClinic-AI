@@ -1,0 +1,237 @@
+/* ========== Timeline ========== */
+.timeline {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -1.5rem;
+    top: 0.35rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--primary);
+    border: 2px solid var(--white);
+    transform: translateX(-4px);
+}
+
+.timeline-item.appointment::before {
+    background: var(--info);
+}
+
+.timeline-item.diagnosis::before {
+    background: var(--warning);
+}
+
+.timeline-item.prescription::before {
+    background: var(--success);
+}
+
+.timeline-date {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+}
+
+.timeline-content {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.75rem 1rem;
+}
+
+.timeline-content h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.timeline-content p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* ========== AI Results ========== */
+.ai-result {
+    background: linear-gradient(135deg, #f0fdfa 0%, #ecfeff 100%);
+    border: 1px solid #99f6e4;
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    margin-top: 1rem;
+}
+
+.ai-result h4 {
+    color: var(--primary-dark);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.ai-result .ai-section {
+    margin-bottom: 0.75rem;
+}
+
+.ai-result .ai-section h5 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.ai-result .ai-section p,
+.ai-result .ai-section li {
+    font-size: 0.875rem;
+    color: var(--text);
+}
+
+.ai-result .ai-section ul {
+    padding-left: 1.25rem;
+    list-style: disc;
+}
+
+.ai-result .risk-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.risk-low {
+    background: var(--success-light);
+    color: #065f46;
+}
+
+.risk-medium {
+    background: var(--warning-light);
+    color: #92400e;
+}
+
+.risk-high {
+    background: var(--danger-light);
+    color: #991b1b;
+}
+
+/* ========== Prescription Preview ========== */
+.rx-preview {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    background: var(--white);
+}
+
+.rx-header {
+    text-align: center;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.rx-header h3 {
+    color: var(--primary-dark);
+}
+
+.rx-patient-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.rx-medicines {
+    margin-bottom: 1rem;
+}
+
+.rx-medicines table {
+    font-size: 0.875rem;
+}
+
+.rx-instructions {
+    background: var(--bg);
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+}
+
+/* ========== Subscription Plans ========== */
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.plan-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.plan-card.active {
+    border-color: var(--primary);
+}
+
+.plan-card.featured {
+    border-color: var(--primary);
+    background: linear-gradient(to bottom, var(--primary-light), var(--white));
+}
+
+.plan-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.plan-card .price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+}
+
+.plan-card .price span {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+.plan-card .features-list {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.plan-card .features-list li {
+    padding: 0.35rem 0;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.plan-card .features-list .check {
+    color: var(--success);
+}
+
+.plan-card .features-list .cross {
+    color: var(--text-light);
+}

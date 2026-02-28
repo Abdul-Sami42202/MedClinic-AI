@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - MedClinic AI</title>
+  <link rel="stylesheet" href="/src/css/base.css" />
+  <link rel="stylesheet" href="/src/css/components.css" />
+  <link rel="stylesheet" href="/src/css/ui-elements.css" />
+  <link rel="stylesheet" href="/src/css/interactions.css" />
+  <link rel="stylesheet" href="/src/css/dashboard.css" />
+  <link rel="stylesheet" href="/src/css/medical.css" />
+  <link rel="stylesheet" href="/src/css/utilities.css" />
+</head>
+
+<body>
+  <div class="dashboard-layout">
+    <!-- Mobile toggle -->
+    <button class="sidebar-toggle" id="sidebar-toggle"></button>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+          </svg>
+          MedClinic AI
+        </div>
+      </div>
+      <nav class="sidebar-nav" id="sidebar-nav"></nav>
+      <div class="sidebar-footer" id="sidebar-footer"></div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content" id="main-content">
+      <div class="loading-inline">
+        <div class="spinner spinner-sm"></div> Loading...
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="/src/dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up - MedClinic AI</title>
+  <link rel="stylesheet" href="/src/css/base.css" />
+  <link rel="stylesheet" href="/src/css/components.css" />
+  <link rel="stylesheet" href="/src/css/auth.css" />
+  <link rel="stylesheet" href="/src/css/interactions.css" />
+  <link rel="stylesheet" href="/src/css/utilities.css" />
+</head>
+
+<body>
+  <div class="auth-page">
+    <div class="auth-card">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+        </svg>
+        MedClinic AI
+      </div>
+      <h2>Create Account</h2>
+      <p class="subtitle">Sign up to get started with your clinic</p>
+
+      <form id="signup-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" class="form-control" placeholder="Dr. John Doe" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" class="form-control" placeholder="you@example.com" />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" class="form-control" placeholder="Min 6 characters" />
+        </div>
+        <div class="form-group">
+          <label for="role">Role</label>
+          <select id="role" class="form-control">
+            <option value="patient">Patient</option>
+            <option value="doctor">Doctor</option>
+            <option value="receptionist">Receptionist</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+        <div id="auth-error" style="display:none; color:var(--danger); font-size:0.85rem; margin-bottom:1rem;"></div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg" id="signup-btn">Create Account</button>
+      </form>
+
+      <div class="auth-footer">
+        Already have an account? <a href="/signin.html">Sign In</a>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/auth.js"></script>
+</body>
+
+</html>
